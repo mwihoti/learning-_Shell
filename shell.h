@@ -238,7 +238,3 @@ int replace_vars(info_t *);
 int replace_string(char **, char *);
 
 #endif
-<<<<<<< HEAD
-=======
-
->>>>>>> f4dc7a8c11827f9484a607030a11b016775815f3
