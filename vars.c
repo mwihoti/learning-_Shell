@@ -3,7 +3,7 @@
 /**
  * is_chain - test current char in buffer is chain delimeter
  * @info: the parameter struct
- * @buf: the char buffer
+ * @buf: char buffer
  * @p: The address of current position in buf
  *
  * Return: 1 if chain delimeter, 0 otherwise
@@ -38,10 +38,10 @@ int is_chain(info_t *info, char *buf, size_t *p)
 /**
  * checks_chain - checks we should continue chaining based on last status
  * @info: the parameter struct
- * @buf: the char buffer
- * @p: The address of current position in buf
- * @i: The starting position in buf
- * @len: The length of buf
+ * @buf: char buffer
+ * @p: address of current position in buf
+ * @i: starting position in buf
+ * @len: length of buf
  *
  * Return: Void
  */
@@ -71,7 +71,7 @@ void checks_chain(info_t *info, char *buf, size_t *p, size_t i, size_t len)
 
 /**
  * replaces_alias - replaces an aliases in the tokenized string
- * @info: the parameter struct
+ * @info: parameter struct
  *
  * Return: 1 if replaced, 0 otherwise
  */
@@ -100,7 +100,7 @@ int replaces_alias(info_t *info)
 
 /**
  * replace_vars - replaces vars in the tokenized string
- * @info: the parameter struct
+ * @info: parameter struct
  *
  * Return: 1 if replaced, 0 otherwise
  */
@@ -141,8 +141,8 @@ int replace_vars(info_t *info)
 
 /**
  * replace_string - replaces string
- * @old: The address of old string
- * @new: The new string
+ * @old: address of old string
+ * @new: new string
  *
  * Return: 1 if replaced, 0 otherwise
  */

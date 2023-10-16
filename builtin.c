@@ -11,8 +11,7 @@ int _mexit(info_t *info)
 {
 	int exitcheck;
 
-	if (info->argv[1])  /* If there is an exit arguement */
-	{
+	if (info->argv[1])	{
 		exitcheck = _errsatoi(info->argv[1]);
 		if (exitcheck == -1)
 		{

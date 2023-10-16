@@ -117,7 +117,7 @@ int finds_builtin(info_t *);
 void finds_cmd(info_t *);
 void fork_cmd(info_t *);
 
-/* toem_parser.c */
+/* toem_parserd.c */
 int is_cmd(info_t *, char *);
 char *dup_char(char *, int, int);
 char *finds_path(info_t *, char *, char *);
@@ -143,12 +143,12 @@ char *_strdup(const char *);
 void _puts(char *);
 int _putchar(char);
 
-/* toem_exits.c */
+/* toem_exitsd.c */
 char *_strncpy(char *, char *, int);
 char *_strncat(char *, char *, int);
 char *_strchr(char *, char);
 
-/* toem_tokenizer.c */
+/* toem_tokenizerd.c */
 char **strtow(char *, char *);
 char **strtow2(char *, char);
 
@@ -160,7 +160,7 @@ void *_realloc(void *, unsigned int, unsigned int);
 /* toem_memory.c */
 int bfree(void **);
 
-/* toem_atoi.c */
+/* toem_atoid.c */
 int interactive(info_t *);
 int isc_delim(char, char *);
 int _isalpha(int);
@@ -178,7 +178,7 @@ int _mexit(info_t *);
 int _mcd(info_t *);
 int _mhelp(info_t *);
 
-/* toem_builtin1.c */
+/* toem_builtin1d.c */
 int _myhistory(info_t *);
 int _myalias(info_t *);
 
@@ -199,12 +199,12 @@ int _mysetenviron(info_t *);
 int _myunsetenviron(info_t *);
 int populate_environ_list(info_t *);
 
-/* toem_getenv.c */
+/* toem_getenvd.c */
 char **get_environ(info_t *);
 int _unsetenviron(info_t *, char *);
 int _setenviron(info_t *, char *, char *);
 
-/* toem_history.c */
+/* toem_historyd.c */
 char *gets_history_file(info_t *info);
 int writes_history(info_t *info);
 int reads_history(info_t *info);
