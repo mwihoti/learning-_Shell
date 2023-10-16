@@ -40,13 +40,8 @@ extern char **environ;
 /**
  * struct liststr - singly linked list
  * @num: the number field
-<<<<<<< HEAD
- * @str: To a string
- * @next: The points to the next node
-=======
  * @str: a string
  * @next: points to the next node
->>>>>>> f4dc7a8c11827f9484a607030a11b016775815f3
  */
 typedef struct liststr
 {
@@ -238,3 +233,4 @@ int replace_vars(info_t *);
 int replace_string(char **, char *);
 
 #endif
+

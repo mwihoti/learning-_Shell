@@ -2,16 +2,16 @@
 
 /**
  * _mexit - exits the shell
- * @info: Structure containing potential arguments. Used to maintain
- *        consistent function prototype.
- * Return: Exits with a given exit status
- *         (0) if info->argv[0] is not "exit"
+ * @info: Structure containing potential arguments Used to maintain
+ *          constant function prototype.
+ *  Return: exits with a given exit status
+ *         (0) if info.argv[0] != "exit"
  */
 int _mexit(info_t *info)
 {
 	int exitcheck;
 
-	if (info->argv[1])  /* Check if there is an exit argument */
+	if (info->argv[1])  /* If there is an exit arguement */
 	{
 		exitcheck = _errsatoi(info->argv[1]);
 		if (exitcheck == -1)
@@ -30,10 +30,10 @@ int _mexit(info_t *info)
 }
 
 /**
- * _mcd - changes the directory of the process
+ * _mcd - changes the  directory of the process
  * @info: Structure containing potential arguments. Used to maintain
- *        consistent function prototype.
- * Return: Always 0
+ *          constant function prototype.
+ *  Return: Always 0
  */
 int _mcd(info_t *info)
 {
@@ -47,7 +47,8 @@ int _mcd(info_t *info)
 	{
 		dir = _getenviron(info, "HOME=");
 		if (!dir)
-			chdir_ret = chdir((dir = _getenviron(info, "PWD=")) ? dir : "/");
+			chdir_ret =
+				chdir((dir = _getenviron(info, "PWD=")) ? dir : "/");
 		else
 			chdir_ret = chdir(dir);
 	}
@@ -60,15 +61,15 @@ int _mcd(info_t *info)
 			return (1);
 		}
 		_puts(_getenviron(info, "OLDPWD=")), _putchar('\n');
-		chdir_ret = chdir((dir = _getenviron(info, "OLDPWD=")) ? dir : "/");
+		chdir_ret =
+			chdir((dir = _getenviron(info, "OLDPWD=")) ? dir : "/");
 	}
 	else
 		chdir_ret = chdir(info->argv[1]);
 	if (chdir_ret == -1)
 	{
 		prints_error(info, "can't cd to ");
-		_eputs(info->argv[1]);
-		_eputchar('\n');
+		_eputs(info->argv[1]), _eputchar('\n');
 	}
 	else
 	{
@@ -79,17 +80,17 @@ int _mcd(info_t *info)
 }
 
 /**
- * _mhelp - displays information about available commands (not yet implemented)
+ * _mhelp - changes the current directory of the process
  * @info: Structure containing potential arguments. Used to maintain
- *        consistent function prototype.
- * Return: Always 0
+ *          constant function prototype.
+ *  Return: Always 0
  */
 int _mhelp(info_t *info)
 {
 	char **arg_arr;
 
 	arg_arr = info->argv;
-	_puts("Help function called. Function not yet implemented.\n");
+	_puts("help call works. Function not yet implemented \n");
 	if (0)
 		_puts(*arg_arr);
 	return (0);
